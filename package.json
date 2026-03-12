@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "description": "Bot de WhatsApp para Sublimart",
   "main": "script.js",
-  "scripts": {
-    "start": "node script.js"
-  },
+ "scripts": {
+  "start": "node script.js",
+  "postinstall": "npx puppeteer browsers install chrome"
+},
   "keywords": [],
   "author": "",
   "license": "ISC",
