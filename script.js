@@ -18,8 +18,11 @@ const client = new Client({
 
 let pedidos = {};
 
+const QRCode = require('qrcode');
+
 client.on('qr', qr => {
-    qrcode.generate(qr, { small: true });
+    QRCode.toFile('qr.png', qr);
+    console.log("QR generado: revisa el archivo qr.png");
 });
 
 client.on('ready', () => {
